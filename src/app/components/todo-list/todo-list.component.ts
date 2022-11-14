@@ -11,11 +11,12 @@ export class TodoListComponent implements OnInit {
   constructor() { }
 
   tasks: Gig[] = [];
+  newTaskName: string = "";
 
   ngOnInit(): void {
   }
 
-  refreshList() : void {
-    
+  refreshList(task: Gig) : void {
+    this.newTaskName = task.task;
   }
 }

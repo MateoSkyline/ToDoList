@@ -1,0 +1,14 @@
+.task {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.task-buttons {
+    text-align: center;
+    position: relative;
+    top: 2px;
+}
+
+.p-orderlist-controls {
+    display: none !important;
+}

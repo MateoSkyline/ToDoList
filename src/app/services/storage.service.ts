@@ -23,7 +23,7 @@ export class StorageService {
     var tasks: Gig[] = this.readTasks();
     if(tasks == undefined)
       tasks = [];
-    tasks.push(task);
+    tasks.unshift(task);
     this.saveTasks(tasks);
   }
 
@@ -31,6 +31,7 @@ export class StorageService {
     var tasks = this.readTasks();
     var index = tasks.findIndex(x => x.id == id);
     tasks[index].done = true;
+    tasks.push(tasks.splice(index, 1)[0]);
     this.saveTasks(tasks);
   }
 
@@ -38,6 +39,7 @@ export class StorageService {
     var tasks = this.readTasks();
     var index = tasks.findIndex(x => x.id == id);
     tasks[index].done = false;
+    tasks.unshift(tasks.splice(index, 1)[0]);
     this.saveTasks(tasks);
   }
 

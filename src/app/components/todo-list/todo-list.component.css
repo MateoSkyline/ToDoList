@@ -2,3 +2,14 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+ height: 200px;
+}

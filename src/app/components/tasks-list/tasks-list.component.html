@@ -1,0 +1,20 @@
+<div class="grid">
+    <div class="col-12">
+        <p-orderList [value]="tasks" [dragdrop]="true" (onReorder)="reorderTasks()">
+            <ng-template let-task pTemplate="item">
+                <div class="task grid">
+                    <div class="task-buttons col-1">
+                        <button *ngIf="!task.done" (click)="markDone(task.id)" pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined"></button>
+                        <button *ngIf="task.done" (click)="markUndone(task.id)" pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined"></button>
+                    </div>
+                    <div class="col-10">
+                        <p>{{ task.task }}</p>
+                    </div>
+                    <div class="task-buttons col-1">
+                        <button (click)="deleteTask(task.id)" pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text"></button>
+                    </div>
+                </div>
+            </ng-template>
+        </p-orderList>
+    </div>
+</div>
