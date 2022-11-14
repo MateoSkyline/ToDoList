@@ -1,4 +1,4 @@
-<h1 align="center">To Do List</h1>
+<h1 align="center"><img src="/../screenshots/logo.png?raw=true" style="width: 200px;"></h1>
 
 <div align="center">
 <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white">
@@ -42,3 +42,4 @@ ng serve
 * Angular 14.2.5
 * PrimeNG 14.2.1
 * PrimeFlex 6.0.1
+* UUID 9.0.0
